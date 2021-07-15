@@ -20,7 +20,7 @@ jobs:
           fi
     - name: Automatic Approve
     - uses: hmarr/auto-approve-action@v2
-      with:
+      with: 
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: automatic merge
       uses: KeisukeYamashita/auto-pull-request-merge@v1
