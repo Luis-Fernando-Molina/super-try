@@ -18,9 +18,9 @@ jobs:
             echo "${{ github.event.pull_request.user.login }} has not changed his own file!!"
             exit 1
           fi
-    - name: Automatic Approve
-    - uses: hmarr/auto-approve-action@v2
-      with: 
+    - name: automatic approve
+      uses: hmarr/auto-approve-action@v2.1.0
+      with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: automatic merge
       uses: KeisukeYamashita/auto-pull-request-merge@v1
