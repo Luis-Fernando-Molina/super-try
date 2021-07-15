@@ -19,10 +19,9 @@ jobs:
             exit 1
           fi
     - name: Automatic Approve
-      uses: mheap/automatic-approve-action@v1
+    - uses: hmarr/auto-approve-action@v2
       with:
-        token: ${{ secrets.PAT }}
-        workflows: "pr.yml,lint.yml"
+        github-token: ${{ secrets.GITHUB_TOKEN }}
     - name: automatic merge
       uses: KeisukeYamashita/auto-pull-request-merge@v1
     - name: delete-merged-action
